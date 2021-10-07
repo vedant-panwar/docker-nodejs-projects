@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/care2talk_api_qa
+cd /home/ec2-user/node-server
 # set any env variables
 sudo pm2 delete demo
 sudo pm2 delete pm2-logrotate
