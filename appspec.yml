@@ -1,5 +1,14 @@
 version: 0.0
 os: linux
-#files:
-#  - source: /
-#    destination: ./
+files:
+  - source: /
+    destination: /home/ec2-user/node-server
+hooks:
+  AfterInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: root
