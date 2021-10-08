@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo build here...."
+    "build": "echo build here....",
+    "start": "./node_modules/.bin/env-cmd -f ./.env.prod pm2 start -f server.js"
   },
   "author": "",
   "license": "ISC",
