@@ -2,4 +2,7 @@
 
 cd /home/ec2-user/node
 npm install
-npm start
+sudo pm2 delete prod
+sudo pm2 delete pm2-logrotate
+pm2 start server.js --name prod
+pm2 reload prod
