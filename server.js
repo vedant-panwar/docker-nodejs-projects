@@ -1,11 +1,11 @@
 const http = require('http');
 const express = require('express');
 const app = express();
-const {PORT = 3000} = process.env;
+const {PORT = 8080} = process.env;
 
 console.log('PORT',PORT);
 
-app.get('/',(req,res)=> res.send('Hello world !!!! V'));
+app.get('/',(req,res)=> res.send(`Hello world from node server ${req.socket.remoteAddress}`));
 
 
 app.listen(PORT,()=>{
